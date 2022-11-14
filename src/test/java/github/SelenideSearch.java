@@ -20,6 +20,7 @@ public class SelenideSearch {
 
         $("a[href$='SoftAssertions']").click();
         $("#user-content-3-using-junit5-extend-test-class").closest("h4").sibling(0).$("pre").shouldBe(visible);
-        //$x("//h4[a[@id='user-content-3-using-junit5-extend-test-class']]/following-sibling::div/pre").shouldBe(visible);
+
+        //$x("//h4[a[@id='user-content-3-using-junit5-extend-test-class']]/following-sibling::div[1]/pre").shouldBe(visible);
     }
 }
