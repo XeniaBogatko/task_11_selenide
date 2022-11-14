@@ -4,8 +4,7 @@ import org.junit.jupiter.api.Test;
 
 import static com.codeborne.selenide.Condition.text;
 import static com.codeborne.selenide.Condition.visible;
-import static com.codeborne.selenide.Selenide.$;
-import static com.codeborne.selenide.Selenide.open;
+import static com.codeborne.selenide.Selenide.*;
 
 public class SelenideSearch {
 
@@ -20,7 +19,7 @@ public class SelenideSearch {
         $("[data-filterable-for='wiki-pages-filter']").shouldHave(text("SoftAssertions"));
 
         $("a[href$='SoftAssertions']").click();
-        $("#user-content-3-using-junit5-extend-test-class").closest("h4")
-                .sibling(0).$("pre").shouldBe(visible);
+        $("#user-content-3-using-junit5-extend-test-class").closest("h4").sibling(0).$("pre").shouldBe(visible);
+        //$x("//h4[a[@id='user-content-3-using-junit5-extend-test-class']]/following-sibling::div/pre").shouldBe(visible);
     }
 }
